@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+      crossorigin="anonymous">
+<body>
+
+
+<style type="text/css">
+    .tftable {
+        font-size: 12px;
+        color: #333333;
+        width: 70%;
+        border-width: 1px;
+        border-color: #ebab3a;
+        border-collapse: collapse;
+    }
+
+    .tftable th {
+        font-size: 14px;
+        background-color: #e6983b;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #ebab3a;
+        text-align: left;
+    }
+
+    .tftable tr {
+        background-color: #f0c169;
+    }
+
+    .tftable td {
+        font-size: 13px;
+        border-width: 1px;
+        padding: 8px;
+        border-style: solid;
+        border-color: #ebab3a;
+    }
+
+    .tftable tr:hover {
+        background-color: #facb6f;
+    }
+
+    .tftable td.score {
+        background-color: #e67300;
+        text-align: center;
+        font-size: 60px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .tftable td.time {
+        background-color: #063970;
+        text-align: center;
+        font-size: 40px;
+        color: #ffffff;
+    }
+
+    .tftable td.team1 {
+        background-color: #1e81b0;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .tftable td.team2 {
+        background-color: #154c79;
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        color: #ffffff;
+    }
+
+    .tftable th.player {
+        width: 25%;
+    }
+
+    .tftable th.info {
+        width: 5%;
+    }
+
+
+</style>
+<p></p>
+<h1 align="center">NBA Online Statistics</h1>
+<p></p>
+<div class="row justify-content-center">
+    <table id="nba" class="tftable" border="1">
+        <tr>
+            <td colspan="8" class="time" id="time"></td>
+        </tr>
+        <tr>
+            <td colspan="4" class="team1" id="team1"></td>
+            <td colspan="4" class="team2" id="team2"></td>
+        </tr>
+        <tr>
+            <td colspan="8" class="score" id="score"></td>
+        </tr>
+        <tr>
+            <th class="player">Player</th>
+            <th class="info">Points</th>
+            <th class="info">Assists</th>
+            <th class="info">Time</th>
+            <th class="player">Player</th>
+            <th class="info">Points</th>
+            <th class="info">Assists</th>
+            <th class="info">Time</th>
+        </tr>
+        <tr>
+            <td id="a1"></td>
+            <td id="b1"></td>
+            <td id="c1"></td>
+            <td id="d1"></td>
+            <td id="e1"></td>
+            <td id="f1"></td>
+            <td id="g1"></td>
+            <td id="h1"></td>
+        </tr>
+        <tr>
+            <td id="a2"></td>
+            <td id="b2"></td>
+            <td id="c2"></td>
+            <td id="d2"></td>
+            <td id="e2"></td>
+            <td id="f2"></td>
+            <td id="g2"></td>
+            <td id="h2"></td>
+        </tr>
+        <tr>
+            <td id="a3"></td>
+            <td id="b3"></td>
+            <td id="c3"></td>
+            <td id="d3"></td>
+            <td id="e3"></td>
+            <td id="f3"></td>
+            <td id="g3"></td>
+            <td id="h3"></td>
+        </tr>
+        <tr>
+            <td id="a4"></td>
+            <td id="b4"></td>
+            <td id="c4"></td>
+            <td id="d4"></td>
+            <td id="e4"></td>
+            <td id="f4"></td>
+            <td id="g4"></td>
+            <td id="h4"></td>
+        </tr>
+        <tr>
+            <td id="a5"></td>
+            <td id="b5"></td>
+            <td id="c5"></td>
+            <td id="d5"></td>
+            <td id="e5"></td>
+            <td id="f5"></td>
+            <td id="g5"></td>
+            <td id="h5"></td>
+        </tr>
+        <tr>
+            <td id="a6"></td>
+            <td id="b6"></td>
+            <td id="c6"></td>
+            <td id="d6"></td>
+            <td id="e6"></td>
+            <td id="f6"></td>
+            <td id="g6"></td>
+            <td id="h6"></td>
+        </tr>
+        <tr>
+            <td id="a7"></td>
+            <td id="b7"></td>
+            <td id="c7"></td>
+            <td id="d7"></td>
+            <td id="e7"></td>
+            <td id="f7"></td>
+            <td id="g7"></td>
+            <td id="h7"></td>
+        </tr>
+        <tr>
+            <td id="a8"></td>
+            <td id="b8"></td>
+            <td id="c8"></td>
+            <td id="d8"></td>
+            <td id="e8"></td>
+            <td id="f8"></td>
+            <td id="g8"></td>
+            <td id="h8"></td>
+        </tr>
+        <tr>
+            <td id="a9"></td>
+            <td id="b9"></td>
+            <td id="c9"></td>
+            <td id="d9"></td>
+            <td id="e9"></td>
+            <td id="f9"></td>
+            <td id="g9"></td>
+            <td id="h9"></td>
+        </tr>
+        <tr>
+            <td id="a10"></td>
+            <td id="b10"></td>
+            <td id="c10"></td>
+            <td id="d10"></td>
+            <td id="e10"></td>
+            <td id="f10"></td>
+            <td id="g10"></td>
+            <td id="h10"></td>
+        </tr>
+        <tr>
+            <td id="a11"></td>
+            <td id="b11"></td>
+            <td id="c11"></td>
+            <td id="d11"></td>
+            <td id="e11"></td>
+            <td id="f11"></td>
+            <td id="g11"></td>
+            <td id="h11"></td>
+        </tr>
+        <tr>
+            <td id="a12"></td>
+            <td id="b12"></td>
+            <td id="c12"></td>
+            <td id="d12"></td>
+            <td id="e12"></td>
+            <td id="f12"></td>
+            <td id="g12"></td>
+            <td id="h12"></td>
+        </tr>
+        <tr>
+            <td id="a13"></td>
+            <td id="b13"></td>
+            <td id="c13"></td>
+            <td id="d13"></td>
+            <td id="e13"></td>
+            <td id="f13"></td>
+            <td id="g13"></td>
+            <td id="h13"></td>
+        </tr>
+
+    </table>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+
+    function NBAStream() {
+
+        if ("WebSocket" in window) {
+
+            var url = "localhost:8082";
+            console.log(url);
+            var ws = new WebSocket("ws://" + url + "/stream");
+
+            ws.onmessage = function (event) {
+                //console.log(`[message] Data received from server: ${event.data}`);
+
+                var curData = JSON.parse(`${event.data}`);
+
+
+                setTime(curData.time);
+                setTeams(curData.teams[0].name, curData.teams[1].name);
+                setScore(curData.score);
+
+                updateTeamList(curData.teams)
+
+            };
+
+            ws.onclose = function (event) {
+                if (event.wasClean) {
+                    console.log(`[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`);
+                } else {
+                    console.log('[close] Connection died');
+                }
+            };
+
+            ws.onerror = function (error) {
+                console.log(`[error] ${error.message}`);
+            };
+
+        } else {
+            console.log("WebSocket NOT supported by your Browser!");
+        }
+    }
+
+    function updateTeamList(tl) {
+        for (t = 0; t < 2; t++) {
+            if (t === 0) {
+                id = '#a';
+                pt = '#b';
+                as = '#c';
+                at = '#d';
+            } else {
+                id = '#e';
+                pt = '#f';
+                as = '#g';
+                at = '#h';
+            }
+            for (n = 0; n < tl[t].players.length; n++) {
+                $(id + (n + 1).toString()).html(tl[t].players[n].name);
+                $(pt + (n + 1).toString()).html(tl[t].players[n].points);
+                $(as + (n + 1).toString()).html(tl[t].players[n].assists);
+                $(at + (n + 1).toString()).html(tl[t].players[n].active_time);
+                if (tl[t].players[n].is_active) {
+                    selectRow(id);
+                    selectRow(pt);
+                    selectRow(as);
+                    selectRow(at);
+                } else {
+                    unselectRow(id);
+                    unselectRow(pt);
+                    unselectRow(as);
+                    unselectRow(at);
+                }
+            }
+        }
+
+
+    }
+
+    function selectRow(tdId) {
+        $(tdId + (n + 1).toString()).css('font-weight', 'bolder');
+        $(tdId + (n + 1).toString()).css('font-size', '14px');
+        $(tdId + (n + 1).toString()).css('color', '#000000');
+    }
+
+    function unselectRow(tdId) {
+        $(tdId + (n + 1).toString()).css('font-weight', 'normal');
+        $(tdId + (n + 1).toString()).css('font-size', '14px');
+        $(tdId + (n + 1).toString()).css('color', '#444444');
+    }
+
+    function setTime(newValue) {
+        $('#time').html(newValue);
+    }
+
+    function setTeams(team1, team2) {
+        $('#team1').html(team1);
+        $('#team2').html(team2);
+    }
+
+    function setScore(score) {
+        $('#score').html(score);
+    }
+
+    NBAStream();
+
+</script>
+</html>
